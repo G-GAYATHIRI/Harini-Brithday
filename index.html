@@ -48,9 +48,11 @@ footer{padding:30px;text-align:center;color:#d8b8ef}
  <button class="btn" onclick="openWebsite()">Open Your Gift 💗</button>
 </div>
 
-<audio id="music" loop><source src="music.mp3" type="audio/mpeg"></audio>
-<button class="music" onclick="musicToggle()">♫</button>
+<audio id="music" preload="auto" loop>
+    <source src="./music.mp3" type="audio/mpeg">
+</audio>
 
+<button class="music" id="musicButton" onclick="musicToggle()">♫</button>
 <div class="hero">
  <div class="content">
   <p class="small">A SPECIAL DAY FOR A SPECIAL PERSON</p>
@@ -152,27 +154,51 @@ Un Best Friend! 💗🦋</div></div>
 <script>
 let playing=false;
 function musicToggle(){
- const music=document.getElementById("music");
- if(!playing){music.play().then(()=>{playing=true}).catch(()=>alert("Add music.mp3 in the same folder!"));}
- else{music.pause();playing=false;}
+ const music = document.getElementById("music");
+const musicButton = document.getElementById("musicButton");
+
+async function musicToggle() {
+    try {
+        if (music.paused) {
+            await music.play();
+            musicButton.innerHTML = "⏸";
+        } else {
+            music.pause();
+            musicButton.innerHTML = "♫";
+        }
+    } catch (error) {
+        alert("Music load aagala! Check music.mp3 file.");
+    }
 }
+
 function blowCandles(){
  document.querySelector(".cake").innerHTML="🍰";
  document.getElementById("cakeText").innerHTML="Yayyy! Happy Birthday Harini! 💗🎉";
  celebrate();
 }
-function openGift(){document.getElementById("message").classList.remove("hidden");celebrate();}
+
+function openGift(){
+ document.getElementById("message").classList.remove("hidden");
+ celebrate();
+}
+
 function celebrate(){
  for(let i=0;i<40;i++){
-  let heart=document.createElement("div");heart.className="heart";
+  let heart=document.createElement("div");
+  heart.className="heart";
   heart.innerHTML=["💗","💜","✨","🦋","🎉"][Math.floor(Math.random()*5)];
   heart.style.left=Math.random()*100+"vw";
   heart.style.animationDuration=(3+Math.random()*4)+"s";
   heart.style.fontSize=(18+Math.random()*20)+"px";
-  document.body.appendChild(heart);setTimeout(()=>heart.remove(),7500);
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),7500);
  }
 }
-function openWebsite(){document.getElementById("opening").classList.add("hide");celebrate();}
+
+function openWebsite(){
+ document.getElementById("opening").classList.add("hide");
+ celebrate();
+}
 </script>
 </body>
 </html>
