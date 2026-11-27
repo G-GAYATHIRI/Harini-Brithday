@@ -1,46 +1,116 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happiest Birthday Harini 💗</title>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:Georgia,serif;background:#160d29;color:white;overflow-x:hidden}
-#opening{position:fixed;inset:0;z-index:999;background:linear-gradient(135deg,#301449,#a45cbb);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}
+
+#opening{
+ position:fixed;inset:0;z-index:999;
+ background:linear-gradient(135deg,#301449,#a45cbb);
+ display:flex;flex-direction:column;
+ align-items:center;justify-content:center;
+ text-align:center;padding:20px
+}
 #opening .env{font-size:100px;cursor:pointer;animation:bounce 1.5s infinite}
 #opening p{margin:15px;color:white}
 #opening.hide{display:none}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px;background:radial-gradient(circle at top,#70469b,#29143f 55%,#10091d)}
+
+.hero{
+ min-height:100vh;display:flex;
+ align-items:center;justify-content:center;
+ text-align:center;padding:25px;
+ background:radial-gradient(circle at top,#70469b,#29143f 55%,#10091d)
+}
 .content{max-width:700px;animation:appear 2s ease}
-@keyframes appear{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:translateY(0)}}
+@keyframes appear{
+ from{opacity:0;transform:translateY(35px)}
+ to{opacity:1;transform:translateY(0)}
+}
 .small{letter-spacing:5px;color:#e9b9ff;font-size:13px}
-h1{font-size:clamp(48px,10vw,85px);margin:25px 0;color:#ffd6ed;text-shadow:0 0 30px #e59cff}
+h1{
+ font-size:clamp(48px,10vw,85px);
+ margin:25px 0;color:#ffd6ed;
+ text-shadow:0 0 30px #e59cff
+}
 .hero p{font-size:18px;line-height:1.8;color:#e6d5f4}
-.btn{margin-top:30px;padding:15px 32px;border-radius:40px;border:none;background:linear-gradient(45deg,#ff8bc5,#bd83ff);color:#29143f;font-weight:bold;cursor:pointer}
+
+.btn{
+ margin-top:30px;padding:15px 32px;
+ border-radius:40px;border:none;
+ background:linear-gradient(45deg,#ff8bc5,#bd83ff);
+ color:#29143f;font-weight:bold;cursor:pointer
+}
 .btn:hover{transform:scale(1.08);box-shadow:0 0 25px #ed9bff}
+
 section{padding:85px 20px;text-align:center}
 .heading{font-size:clamp(28px,6vw,40px);color:#ffd1ed;margin-bottom:20px}
 .sub{color:#d5c2e8;line-height:1.8;margin-bottom:30px}
-.card{max-width:750px;margin:auto;padding:35px;background:#ffffff0c;border:1px solid #ffffff25;border-radius:25px;box-shadow:0 0 35px #bd83ff16}
-.letter{text-align:left;line-height:2;color:#f2e5ff;font-family:Arial,sans-serif;white-space:pre-line}
-.gallery{max-width:1000px;margin:30px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.gallery img{width:100%;height:360px;object-fit:cover;border-radius:20px;border:2px solid #e9b9ff;box-shadow:0 8px 25px #0005;transition:.4s}
+
+.card{
+ max-width:750px;margin:auto;padding:35px;
+ background:#ffffff0c;border:1px solid #ffffff25;
+ border-radius:25px;box-shadow:0 0 35px #bd83ff16
+}
+.letter{
+ text-align:left;line-height:2;color:#f2e5ff;
+ font-family:Arial,sans-serif;white-space:pre-line
+}
+
+.gallery{
+ max-width:1000px;margin:30px auto;
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:18px
+}
+.gallery img{
+ width:100%;height:360px;object-fit:cover;
+ border-radius:20px;border:2px solid #e9b9ff;
+ box-shadow:0 8px 25px #0005;transition:.4s
+}
 .gallery img:hover{transform:scale(1.035)}
-.cake{font-size:110px;cursor:pointer;margin:25px;display:inline-block;animation:bounce 1.5s infinite;filter:drop-shadow(0 0 18px #ff9bd4)}
+
+.cake{
+ font-size:110px;cursor:pointer;margin:25px;
+ display:inline-block;animation:bounce 1.5s infinite;
+ filter:drop-shadow(0 0 18px #ff9bd4)
+}
 @keyframes bounce{50%{transform:translateY(-15px)}}
+
 .surprise{font-size:90px;cursor:pointer;animation:bounce 2s infinite}
 .hidden{display:none}
-#cakeText,#message{margin-top:25px;color:#ffd4ed;font-size:21px;line-height:1.8}
+
+#cakeText,#message{
+ margin-top:25px;color:#ffd4ed;
+ font-size:21px;line-height:1.8
+}
 #message{animation:appear 1s ease}
+
 footer{padding:30px;text-align:center;color:#d8b8ef}
-.heart{position:fixed;top:-30px;pointer-events:none;animation:fall linear forwards;z-index:1000}
-@keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:0}}
-.music{position:fixed;right:18px;bottom:18px;z-index:10;border-radius:50%;width:52px;height:52px;border:0;background:#e9b9ff;font-size:22px;cursor:pointer}
+
+.heart{
+ position:fixed;top:-30px;pointer-events:none;
+ animation:fall linear forwards;z-index:1000
+}
+@keyframes fall{
+ to{transform:translateY(110vh) rotate(360deg);opacity:0}
+}
+
+.music{
+ position:fixed;right:18px;bottom:18px;z-index:1001;
+ border-radius:50%;width:52px;height:52px;
+ border:0;background:#e9b9ff;font-size:22px;cursor:pointer
+}
 </style>
 </head>
+
 <body>
+
 <div id="opening">
  <div class="env" onclick="openWebsite()">💌</div>
  <h1>Hey Harini!</h1>
@@ -48,11 +118,12 @@ footer{padding:30px;text-align:center;color:#d8b8ef}
  <button class="btn" onclick="openWebsite()">Open Your Gift 💗</button>
 </div>
 
+<!-- MUSIC -->
 <audio id="music" preload="auto" loop>
-    <source src="./music.mp3" type="audio/mpeg">
+ <source src="./music.mp3" type="audio/mpeg">
 </audio>
-
 <button class="music" id="musicButton" onclick="musicToggle()">♫</button>
+
 <div class="hero">
  <div class="content">
   <p class="small">A SPECIAL DAY FOR A SPECIAL PERSON</p>
@@ -66,15 +137,16 @@ footer{padding:30px;text-align:center;color:#d8b8ef}
  <h2 class="heading">Our Beautiful Memories 📸</h2>
  <p class="sub">Every picture has a story.<br>Every memory has a special place in my heart.</p>
  <div class="gallery">
-  <img src="Harini.1.jpeg" alt="Our beautiful memory 1">
-  <img src="Haini.2.jpeg" alt="Our beautiful memory 2">
-  <img src="Harini.3.jpeg" alt="Our beautiful memory 3">
+  <img src="./Harini.1.jpeg" alt="Our beautiful memory 1">
+  <img src="./Haini.2.jpeg" alt="Our beautiful memory 2">
+  <img src="./Harini.3.jpeg" alt="Our beautiful memory 3">
  </div>
 </section>
 
 <section>
  <h2 class="heading">A Letter For You 💌</h2>
- <div class="card"><div class="letter">Dear Harini,
+ <div class="card">
+ <div class="letter">Dear Harini,
 🎂 HAPPIEST BIRTHDAY HARINI MADAM 🎉❤️
 
 My Dear Best Friend ❤️🥹
@@ -128,7 +200,8 @@ Stay happy, keep smiling and achieve everything you dream of!
 Love you so much di Thangooo! My forever best friend! ❤️🫂
 
 With lots and lots of love,
-Un Best Friend! 💗🦋</div></div>
+Un Best Friend! 💗🦋</div>
+ </div>
 </section>
 
 <section>
@@ -142,33 +215,34 @@ Un Best Friend! 💗🦋</div></div>
  <h2 class="heading">One Last Surprise 🎁</h2>
  <p class="sub">I have something special for you...</p>
  <div class="surprise" onclick="openGift()">🎁</div>
- <div id="message" class="hidden">💗 Happiest Birthday Harini! 💗<br><br>
+ <div id="message" class="hidden">
+ 💗 Happiest Birthday Harini! 💗<br><br>
  You deserve all the happiness in this world.
  May your life be filled with endless smiles,
  beautiful memories and magical moments.
- <br><br>Forever and Always! 🦋✨</div>
+ <br><br>Forever and Always! 🦋✨
+ </div>
 </section>
 
 <footer>Made with endless love 💗<br>For My Special Person — Harini</footer>
 
 <script>
-let playing=false;
-function musicToggle(){
- const music = document.getElementById("music");
+const music = document.getElementById("music");
 const musicButton = document.getElementById("musicButton");
 
-async function musicToggle() {
-    try {
-        if (music.paused) {
-            await music.play();
-            musicButton.innerHTML = "⏸";
-        } else {
-            music.pause();
-            musicButton.innerHTML = "♫";
-        }
-    } catch (error) {
-        alert("Music load aagala! Check music.mp3 file.");
-    }
+async function musicToggle(){
+ try{
+  if(music.paused){
+   await music.play();
+   musicButton.innerHTML = "⏸";
+  }else{
+   music.pause();
+   musicButton.innerHTML = "♫";
+  }
+ }catch(error){
+  alert("Music load aagala! Check music.mp3 file name and location.");
+  console.error("Music error:",error);
+ }
 }
 
 function blowCandles(){
@@ -200,5 +274,6 @@ function openWebsite(){
  celebrate();
 }
 </script>
+
 </body>
 </html>
